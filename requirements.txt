@@ -1,0 +1,2 @@
+markovify==0.3.1
+python-twitter==2.2
