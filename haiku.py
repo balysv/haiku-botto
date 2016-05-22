@@ -28,7 +28,7 @@ class HaikuBotto(object):
     '''
     def start(self):
         haiku = self.generate_haiku()
-        # self.api.PostUpdate(haiku)
+        self.api.PostUpdate(haiku)
         threading.Timer(self.config.generation_frequency, self.start).start()
 
     '''
