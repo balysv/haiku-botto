@@ -75,11 +75,8 @@ class HaikuBotto(object):
                 max_overlap_total=self.config.markovify_max_overlap_total
             )
 
-        haiku = ''.join([
-            first.replace(".", ""), "\n",
-            second.replace(".", ""), "\n",
-            third.replace(".", "")
-        ])
+        haiku = "".join([first, "\n", second, "\n", third])
+        haiku = "".join(c for c in haiku if c not in ('!','.',':','?',';'))
 
         print("")
         print("***********************")
